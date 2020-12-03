@@ -1,0 +1,12 @@
+variable "auth_method" { default = "client_secret_post" }
+variable "domain" { type = string }
+variable "email" { type = string }
+variable "grant_types" { default = ["authorization_code", "implicit"] }
+variable "key_rotation" { default = true }
+variable "label" { type = string }
+variable "logo_uri" { default = "" }
+variable "name" { type = string }
+variable "response_types" { default = ["code", "id_token"] }
+variable "status" { default = "ACTIVE" }
+variable "type" { default = "web" }
+variable "urls" { type = list(string) }
