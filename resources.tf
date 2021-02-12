@@ -10,7 +10,7 @@ resource "okta_app_oauth" "app" {
   )
   status                     = var.status
   auto_key_rotation          = var.key_rotation
-  logo_uri                   = var.logo_uri
+  #logo_uri                   = var.logo_uri # disabled as a recent update seems to disallow this to be set to an empty string
   hide_ios                   = true
   hide_web                   = true
   response_types             = var.response_types
