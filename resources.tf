@@ -5,6 +5,7 @@ resource "okta_app_oauth" "app" {
   login_uri   = formatlist("%s/*", var.urls).0
   redirect_uris = concat(
     var.urls,
+    formatlist("%s/oauth2/default/v1/authorize", var.urls),
     formatlist("%s/oauth2/callback", var.urls),
     formatlist("%s/*", var.urls)
   )
