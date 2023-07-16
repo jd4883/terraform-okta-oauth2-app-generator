@@ -11,9 +11,6 @@ resource "okta_app_oauth" "app" {
   hide_web                   = true
   response_types             = var.response_types
   token_endpoint_auth_method = var.auth_method
-  lifecycle {
-    ignore_changes = [users]
-  }
 }
 
 resource "okta_app_user" "user" {
